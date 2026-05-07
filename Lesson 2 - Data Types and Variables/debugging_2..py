@@ -1,0 +1,15 @@
+ #3 Question Quiz - Debug all the errors, including any semantic errors.
+
+print("Hello!")
+print("This is a quick 3 part quiz. A question will be asked, and then you answer it")
+print("First question:")
+input("How many millimetres in a centimetre?")
+print("The answer is 10!")
+
+input("Next Question:")
+print("What is the capital of New Zealand?")
+print("The answer is Wellington. That was easy, wasn't it?")
+
+print("Final Question!")
+input("What is 3 x 6?")
+Print("The answer is 18!")
