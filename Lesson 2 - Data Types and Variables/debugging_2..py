@@ -1,15 +1,46 @@
  #3 Question Quiz - Debug all the errors, including any semantic errors.
 
+
+
+# working code 
+#print("Hello!")
+#print("This is a quick 3 part quiz. A question will be asked, and then you answer it")
+#print("First question:")
+#input("How many millimetres in a centimetre?")
+#print("The answer is 10!")
+
+#print("Next Question:")
+#input("What is the capital of New Zealand?")
+#print("The answer is Wellington. That was easy, wasn't it?")
+
+#print("Final Question!")
+#input("What is 3 x 6?")
+#print("the answer is 18")
+
+#trying to inprove the code
+
 print("Hello!")
 print("This is a quick 3 part quiz. A question will be asked, and then you answer it")
 print("First question:")
-input("How many millimetres in a centimetre?")
-print("The answer is 10!")
+first_answer = input("How many millimetres in a centimetre?")
+if first_answer in ("10") :
+  
+  
+    print("Correct the answer is 10") 
+if first_answer != ("10") : 
+    print("Incorrect the answer is 10")
 
-input("Next Question:")
-print("What is the capital of New Zealand?")
-print("The answer is Wellington. That was easy, wasn't it?")
+
+print("Next Question:")
+second_answer = input("What is the capital of New Zealand?")
+if second_answer in ("wellington", "Wellington"):
+     print("Correct the answer is Wellington")
+
+if second_answer != ("wellington", "Wellington") : 
+    print("Incorrect the answer is Wellington")
+     
+
 
 print("Final Question!")
 input("What is 3 x 6?")
-Print("The answer is 18!")
+print("the answer is 18")
