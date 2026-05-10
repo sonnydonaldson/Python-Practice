@@ -36,11 +36,16 @@ second_answer = input("What is the capital of New Zealand?")
 if second_answer in ("wellington", "Wellington"):
      print("Correct the answer is Wellington")
 
-if second_answer != ("wellington", "Wellington") : 
+elif second_answer != ("wellington", "Wellington") : 
     print("Incorrect the answer is Wellington")
      
 
 
 print("Final Question!")
-input("What is 3 x 6?")
-print("the answer is 18")
+third_answer = input("What is 3 x 6 ")
+
+if third_answer in ("18") :
+    print("Correct the answer is 18")
+
+if third_answer != ("18") : 
+    print("Incorrect the answer is 18")
