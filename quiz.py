@@ -20,5 +20,20 @@ if first_question_answer not in ("11.1km/s", "24,791mph", "39,897km/h"):
 
 
 
+# second question and getting their answer for it
+print("second question")
+second_question_answer = input("What metal has the highest melting point")
+
+
+# cheaking their answer is correct and printing the repily for if it is correct or incorrect
+
+if second_question_answer in ("Tungsten", "tungsten"): 
+    print("correct it has a melting point of 3,422 celises ")
+
+if second_question_answer not in ("Tungsten", "tungsten"):
+    print("incorrect the element is Tungsten with a melting point of 3422 celises")
+
+    
+
 
 
