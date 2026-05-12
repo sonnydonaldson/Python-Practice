@@ -12,9 +12,7 @@ first_answer = input("How many millimetres in a centimetre?")
 
  # cheaking their answer is correct and printing the repily for if it is correct or incorrect 
 if first_answer in ("10") :
-  
-  
-    print("Correct the answer is 10") 
+     print("Correct the answer is 10") 
 if first_answer != ("10") : 
     print("Incorrect the answer is 10")
 
@@ -28,9 +26,10 @@ second_answer = input("What is the capital of New Zealand?")
 if second_answer in ("wellington", "Wellington"):
      print("Correct the answer is Wellington")
 
-elif second_answer != ("wellington", "Wellington") : 
+if second_answer not in ("wellington", "Wellington") : 
     print("Incorrect the answer is Wellington")
      
+
 
 # printing the third question and getting there answer
 print("Final Question!")

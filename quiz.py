@@ -5,6 +5,20 @@ print("hello " + player_name)
 print(INTRODUCTION)
 
 
-# First question and getting there answer for it 
+# First question and getting their answer for it 
+print("First question")
+first_question_answer = input("what is the fastest any man made object has gone(please include km\s or mph or km/h )")
 
-first_question_answer = input("")
+
+# cheaking their answer is correct and printing the repily for if it is correct or incorrect
+
+if first_question_answer in ("11.1km/s", "24,791mph", "39,897km/h"):
+    print("Correct that is the answer it was achieved by the crew of Apollo 10 ")
+
+if first_question_answer not in ("11.1km/s", "24,791mph", "39,897km/h"):
+    print("incorrect the answer is 11.1km/s or  24,791mph or 39,897km/h this was done by the crew of apollo ")
+
+
+
+
+
