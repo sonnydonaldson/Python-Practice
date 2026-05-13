@@ -7,7 +7,7 @@ print(INTRODUCTION + "\n")
 
 # First question and getting their answer for it 
 print("First question(this one is multiple choice)")
-print("What is the fastest any man made object has gone \n A = 37,824 km/h \n B = 11.1km/s \n C = 383,947 Mph \n D = 3,692 mph")
+print("What is the fastest any man made craft has gone(so it has a person in side of it)\n A = 37,824 km/h \n B = 11.1km/s \n C = 383,947 Mph \n D = 3,692 mph")
 first_question_answer = input()
 
 # cheaking their answer is correct and printing the repily for if it is correct or incorrect
@@ -22,7 +22,7 @@ if first_question_answer not in ("b", "B"):
 
 # second question and getting their answer for it
 print("Second question")
-second_question_answer = input("What metal has the highest melting point")
+second_question_answer = input("What element has the highest melting point")
 
 
 # cheaking their answer is correct and printing the repily for if it is correct or incorrect
@@ -69,4 +69,14 @@ if fourth_question_answer not in ("D", "d"):
 # fifth question and getting their answer for it 
 
 print("Fifth question(true or false )")
-print()
+fifth_question_answer = input("eletrons are the smallest subatomic particle")
+
+#cheaking their answer is correct and printing the repily for if it is correct or incorrect
+
+if fifth_question_answer in ("True", "true"):
+    print("correct the smallest subatomic particle is Quarks")
+
+if fifth_question_answer not in ("True", "true"):
+    print("Incorrect the smallest subatomic particle is Quarks")
+
+
