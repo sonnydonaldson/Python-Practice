@@ -2,38 +2,71 @@
 INTRODUCTION = "This is a quiz about random stuff hope you like it"
 player_name = input("What is your name ").capitalize()
 print("hello " + player_name)
-print(INTRODUCTION)
+print(INTRODUCTION + "\n")
 
 
 # First question and getting their answer for it 
-print("First question")
-first_question_answer = input("what is the fastest any man made object has gone(please include km\s or mph or km/h )")
-
+print("First question(this one is multiple choice)")
+print("What is the fastest any man made object has gone \n A = 37,824 km/h \n B = 11.1km/s \n C = 383,947 Mph \n D = 3,692 mph")
+first_question_answer = input()
 
 # cheaking their answer is correct and printing the repily for if it is correct or incorrect
 
-if first_question_answer in ("11.1km/s", "24,791mph", "39,897km/h"):
-    print("Correct that is the answer it was achieved by the crew of Apollo 10 ")
+if first_question_answer in ("b", "B"):
+    print("Correct that is the answer it was achieved by the crew of Apollo 10 \n")
 
-if first_question_answer not in ("11.1km/s", "24,791mph", "39,897km/h"):
-    print("incorrect the answer is 11.1km/s or  24,791mph or 39,897km/h this was done by the crew of apollo ")
+if first_question_answer not in ("b", "B"):
+    print("Incorrect the answer is 11.1km/s or  24,791mph or 39,897km/h this was done by the crew of apollo \n")
 
 
 
 # second question and getting their answer for it
-print("second question")
+print("Second question")
 second_question_answer = input("What metal has the highest melting point")
 
 
 # cheaking their answer is correct and printing the repily for if it is correct or incorrect
 
 if second_question_answer in ("Tungsten", "tungsten"): 
-    print("correct it has a melting point of 3,422 celises ")
+    print("Correct it has a melting point of 3,422 celises \n")
 
 if second_question_answer not in ("Tungsten", "tungsten"):
-    print("incorrect the element is Tungsten with a melting point of 3422 celises")
+    print("Incorrect the element is Tungsten with a melting point of 3422 celises\n")
 
+
+# third question and getting their answer for it
+
+print("Third question(this one is multiple choice)")
+print("Who created the theory of relativity\n A = Isaac Newton \n B = Galileo Galilei \n C = Albert Einstein \n D = Nikola Tesla")
+third_question_answer = input()
+
+
+# cheaking their answer is correct and printing the repily for if it is correct or incorrect
+
+if third_question_answer in ("C", "c"):
+    print("Correct it Was Albert Einstein")
+
+if third_question_answer not in ("C", "c"):
+    print("Incorrect the answer is C, Albert Einstein")
     
 
+# fourth question and getting their answer for it 
+
+print("fourth question(this one is multiple choice)")
+print("How big was Tsar Bomba originally going to be(in megatons)\n A = 25 magatons B = 58 magatons C = 90 magatons D = 100 magaton E = 50 magatons")
+fourth_question_answer = input()
+
+# cheaking their answer is correct and printing the repily for if it is correct or incorrect
 
 
+if fourth_question_answer in ("D", "d"):
+    print("Correct the reason it was smaller was because of concerns over massive radioactive fallout and the high risk of not allowing the bomber crew enough time to escape the explosion.")
+
+if fourth_question_answer not in ("D", "d"):
+    print("Incorrect the answer is 100 magaton the reason it was smaller was because there was concerns over massive radioactive fallout and the high risk of not allowing the bomber crew enough time to escape the explosion.")
+
+
+# fifth question and getting their answer for it 
+
+print("Fifth question(true or false )")
+print()
