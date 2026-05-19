@@ -48,12 +48,39 @@
 # and tally how many times they choose each
 # Determine what they are at the end using the letter with the highest tally.
 # Eg. If they picked mostly As, maybe they are Pikachu.
-
-
-
+second_question_answer = None
+answerValid = False
 print("this is an amimal test to see what animal you are")
-frist_question_answer = print("first question\n Do you prefer to be with people or be alone  ")
+while answerValid == False:
+    first_question_answer = input("first question\n Do you prefer to be with people or be alone ").upper().replace(" ", "")
 
-if frist_question_answer == ("people"):
-    second_question_answer = input("second question\n are you are leader")
+    if first_question_answer in ["ALONE", "PEOPLE"]:
+        answerValid = True
+
+answerValid = False
+if first_question_answer == "PEOPLE":
+    while answerValid == False:
+        second_question_answer = input("second question\nAre you are leader ").upper().replace(" ","")
+
+        if second_question_answer == "YES":
+            print("You are a Lion")
+            answerValid = True
+        elif second_question_answer == "NO":
+            print("You are a fish")
+            answerValid = True
+
+
+
+if first_question_answer == "ALONE":
+    while answerValid == False:
+        second_question_answer = input("second question\nAre you a night person or a day person ").upper().replace(" ","")
+
+        if second_question_answer =="NIGHT":
+            print("You are an Owl")
+            answerValid = True
+        elif second_question_answer == "DAY":
+            print("You are an female cheetah")
+            answerValid = True
+
+
       
