@@ -48,15 +48,19 @@
 # and tally how many times they choose each
 # Determine what they are at the end using the letter with the highest tally.
 # Eg. If they picked mostly As, maybe they are Pikachu.
+#making sure the varibles dont break 
 second_question_answer = None
 answerValid = False
 print("this is an amimal test to see what animal you are")
+
+#getting the first answer 
 while answerValid == False:
     first_question_answer = input("first question\n Do you prefer to be with people or be alone ").upper().replace(" ", "")
 
     if first_question_answer in ["ALONE", "PEOPLE"]:
         answerValid = True
 
+#responding to the first answera and giving you what animal you are for the first answer 
 answerValid = False
 if first_question_answer == "PEOPLE":
     while answerValid == False:
@@ -69,7 +73,7 @@ if first_question_answer == "PEOPLE":
             print("You are a fish")
             answerValid = True
 
-
+#responding to the first answera and giving you what animal you are for the second answer 
 
 if first_question_answer == "ALONE":
     while answerValid == False:
