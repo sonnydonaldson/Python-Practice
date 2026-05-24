@@ -36,3 +36,6 @@
 # so the remaining_budget can be updated every time the program is used
 # You will need to create a save.txt file to go with this (keep it in the same folder)
 # If you're not sure how to do this check here: https://www.w3schools.com/python/python_file_write.asp 
+
+
+BUDGET = 20000
