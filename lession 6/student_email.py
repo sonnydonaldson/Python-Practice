@@ -27,12 +27,6 @@
 # Output a temporary password (all uppercase). You can choose how you create this, 
 # but it needs to be unique for each user
 
-import random
-id_number = random.randint(10000000, 99999999)
-
-print("Hello this is a student email creator")
-first_name = input("what is your first name ").lower().strip()
-last_name = input("what is your last name ").lower().strip()
 
 
 
@@ -41,8 +35,7 @@ last_name = input("what is your last name ").lower().strip()
 
 
 
-#code to do the stuff before expert
-"""
+
 print("Hello this is a student email creator")
 first_name = input("what is your first name ").lower().strip()
 last_name = input("what is your last name ").lower().strip()
@@ -57,4 +50,3 @@ id_password = str(id_password)
 
 print("This is your email\n"+ first_name + last_name + id +"@gmail.com")
 print("Here is a temorary password a]s well\n" + first_name_password + last_name_password + id_password)
-"""
