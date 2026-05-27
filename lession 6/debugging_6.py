@@ -22,7 +22,7 @@ else:
 
 #getting their disternation and outputting their flight time 
 destination = input("Enter your destination code: ").upper().strip()
-if destination == "AKL" or "WLG":
+if destination == "AKL" or destination == "WLG":
     print("Flight is delayed 5 minutes.")
 elif destination == "CHC":
     print("flight is on time.")
