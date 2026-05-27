@@ -22,19 +22,19 @@
 # EXPERT
 # Follow the same task (with extension), but use dictionaries to make the code more efficient
 
-
+#getting there name
 name = input("Hello what is your name ").capitalize()
 print(f"hello {name}")
 
 
-
+#getting there hight and age
 height = input("how tall are you in centimeters ")
 height = int(height)
 age = input("what is your age ")
 age = int(age)
 
 
-
+#seeing if the have a heart condtion
 answer_vaild = False
 while answer_vaild == False:
     heart_condition = input("Do you have a heart condition ")
@@ -46,7 +46,7 @@ while answer_vaild == False:
         heart_condition = False
         answer_vaild = True
 
-
+#seeing if the have a vip pass
 answer_vaild = False
 while answer_vaild == False:
     vip_pass = input("Do you have a VIP pass ")
@@ -62,5 +62,5 @@ while answer_vaild == False:
 
 if height > 150 and age > 10 and heart_condition == False or vip_pass == True : 
     print(f"You are allowed on the ride, go ahead {name}")
-elif not height > 150 and age > 10 and heart_condition == False :
-    print(f"you are not allowed on the ride {name}")
+elif not height > 150 or age > 10 or heart_condition == True :
+    print(f"You are not allowed on the ride {name}")
