@@ -64,7 +64,7 @@ while answerValid == False:
 answerValid = False
 if first_question_answer == "PEOPLE":
     while answerValid == False:
-        second_question_answer = input("second question\nAre you are leader ").upper().replace(" ","")
+        second_question_answer = input("second question\nAre you are a leader ").upper().replace(" ","")
 
         if second_question_answer == "YES":
             print("You are a Lion")
