@@ -82,4 +82,15 @@ if fifth_question_answer in ("TRUE"):
 elif fifth_question_answer not in ("TRUE"):
     print("Incorrect the smallest subatomic particle is Quarks")
 
+#sixth question and getting their answer for it 
 
+print("Sixth Question")
+sixth_question_answer = input("What does sound travel faster in air or water").upper().strip()
+
+
+#cheaking their answer is correct and printing the repily for if it is correct or incorrect
+
+if sixth_question_answer in ("WATER"):
+    print("Correct sound travels faster in water")
+elif sixth_question_answer not in ("WATER"):
+    print("Incorrect sound travels faster in water")
