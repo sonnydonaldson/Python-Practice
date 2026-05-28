@@ -89,7 +89,7 @@ while answer_vaild == False:
         elif  which_rollercost == "I LAUGHED AS YOU FELL" and not height > 50 or age > 3 or heart_condition == True:
             print(f"You are not allowed on the ride {name}")
             answer_vaild == True
-        elif answer_vaild == "PRIDE BEFORE" and height > 200 and age > 90 and heart_condition == False or answer_vaild == "PRIDE BEFORE" and vip_pass == True:
+        elif answer_vaild == "PRIDE BEFORE" and height > 200 and age > 50 and heart_condition == False or answer_vaild == "PRIDE BEFORE" and vip_pass == True:
             print(f"You are allowed on the ride, go ahead {name}")
             answer_vaild == True
         elif  answer_vaild == "PRIDE BEFORE" and not height > 200 or age > 90 or heart_condition == True:

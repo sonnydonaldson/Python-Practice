@@ -39,3 +39,22 @@
 
 
 BUDGET = 20000
+SAVINGS = 50
+
+item_they_want = input("what is the name of the item youm want ")
+item_cost = input(f"what is the cost of the {item_they_want} you want ")
+item_cost = int(item_cost)
+
+percentage_of_budget = (item_cost/BUDGET) * 100
+print(f"it is {percentage_of_budget}% of your budget")
+
+if percentage_of_budget == 0:
+    print("it's free so get it")
+elif percentage_of_budget < 10 :
+    print("it's a small treat so enjoy")
+elif percentage_of_budget < 50 :
+    print("it's a major spend so you should sleep on it")
+elif percentage_of_budget > 100:
+    print("you don't have enough moeny to get it")
+else:
+    print("it costs way too much and isn't worth it")
