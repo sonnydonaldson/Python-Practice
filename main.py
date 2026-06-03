@@ -52,7 +52,7 @@ if 5< 10 :
 else:
     print("10 or more ")
 
-"""
+
 
 
 print("hello".upper())
@@ -60,3 +60,16 @@ print("HELLO".lower())
 
 if "HELLO".lower() == "hello":
     print("The same!")
+
+
+
+guess = input("what's the  password ")
+print("checking password is a match")
+while guess != "secret":
+    guess = input("try again ")
+    print("checking password is a match")
+input("welcome")
+
+"""
+
+
