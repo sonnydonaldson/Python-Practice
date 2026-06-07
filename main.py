@@ -78,7 +78,7 @@ print(random.random())
 print(random.randint(0,10))
 """
 
-
+"""
 
 user_input = "idk"
 try:
@@ -86,3 +86,21 @@ try:
     print(f"you picked {num}")
 except:
     print(f"{user_input} is not a number")
+    """
+
+"""
+count = 0 
+while count < 10:
+    print("counting...")
+    if count < 5:
+        continue
+    print("almost done..")
+print("finshed")
+
+"""
+while True:
+    guess = input("guess a country ")
+    if guess.lower().strip() == "malawi":
+        break
+    print("try again")
+print("well done")
