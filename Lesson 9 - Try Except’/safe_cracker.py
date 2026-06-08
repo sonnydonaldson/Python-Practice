@@ -69,7 +69,7 @@
 # Mastermind Version:
 # Add a part that lets you check each digit (you'll need to use split()) and tells the user how many digits are correct in their guess
 
-correct_combernation = 346543345676543456
+correct_combernation = 325
 how_many_attempts = 0
 
 print("you are trying to hack a safe good luck theif")
@@ -86,8 +86,11 @@ while True:
         print("Error: Safe only accepts digits. Try again.")
         continue
     how_many_attempts += 1
+    if how_many_attempts == 5:
+        print("Alarm triggered! Security is on the way you failed")
+        break
     if user_input == correct_combernation:
-        print("Vault unlocked! You found the treasure!")
+        print(f"Vault unlocked! You found the treasure! it took you {how_many_attempts} trys")
         break
     else:
         print("comination failed try again ")
