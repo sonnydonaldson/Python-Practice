@@ -49,5 +49,14 @@ if user_age < 13:
     print("access denied")
 elif user_age > 13 and user_age < 18:
     print("you have partial access")
+    classs = input("what class do you want to choose \n warrior \n rogue \n mage \n tank \n")
+    access = "partial access"
+    full_access_insttions = ""
 else:
     print("you have full access")
+    classs = input("what class do you want to choose \n warrior \n rogue \n mage \n tank \n")
+    hair_color = input("what hair color do you want\n").lower().strip()
+    eye_color = input("what eye color do you want \n").lower().strip()
+    access = "full access"
+    full_access_insttions = (f"and your hair color is {hair_color} with your eyes being {eye_color}")
+print(f"you are {classs} class and you have {access} {full_access_insttions}")
