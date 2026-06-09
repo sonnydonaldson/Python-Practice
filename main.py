@@ -97,10 +97,14 @@ while count < 10:
     print("almost done..")
 print("finshed")
 
-"""
+
 while True:
     guess = input("guess a country ")
     if guess.lower().strip() == "malawi":
         break
     print("try again")
 print("well done")
+"""
+import random
+shopping_list = ["apples", "plums", "pizza"]
+print(shopping_list[random.randint(0,2)])
