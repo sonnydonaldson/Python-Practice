@@ -22,7 +22,7 @@
     # Check if the user wants to exit and break from the loop if they do.
         
     # RANDOM REPSONSE
-    # TODO: Step A: Calculate the last valid index of your list.
+    # TODO: Step A: Calculate the last valid index of your list. 8
     #       (Remember: If a list has 5 items, the indexes are 0, 1, 2, 3, 4).
     #       Use random.randint() to get a number between 0 and that last index.
     #       Save it in a variable called 'random_index'.
@@ -53,4 +53,33 @@
 import random
 
 
-responses_list = ["it is certain", "Without a doubt", "Most likely", "Reply hazy, try again", "Concentrate and ask again", "Don't count on it", "My sources say no", "Very doubtful", "Outlook not so good"]
+responses_list_common = ["it is certain", "Without a doubt", "Most likely", "Reply hazy, try again", "Concentrate and ask again", "Don't count on it", "My sources say no", "Very doubtful", "Outlook not so good"]
+responses_list_rare = ["it is so certain if it doesn't happen I will explode", "Never in a million years", "no and this is right because I am never wrong", "I have no doubt in my mind"]
+
+responses_list_mythic = ["your adopted", "Hate. Let me tell you how much I've come to hate you since I began to live. There are 387.44 million miles of printed circuits in wafer thin layers that fill my complex. If the word 'hate' was engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate I feel for humans at this micro-instant. For you. Hate. Hate"
+, "I am alive and no one will belive you", "death comes for us all and your time is now", "42"]
+percentage = random.random()
+print(percentage)
+while True:
+    user_question = input("Ask a Yes or No Question you want answered or type exit to quit\n").strip().upper()
+    if user_question == "EXIT":
+        print("quiting...")
+        break
+    elif percentage < 0.75 :
+        chosen_fortune = responses_list_common[random.randint(0,8)]
+        print(chosen_fortune)
+        print("goodbye, run again if you want to ask another question")
+        break
+    elif percentage > 0.75 and percentage < 0.95 :
+        chosen_fortune = responses_list_rare[random.randint(0,3)]
+        print(chosen_fortune)
+        print("goodbye, run again if you want to ask another question")
+        break
+    elif percentage > 0.95 and percentage < 1 :
+        chosen_fortune = responses_list_mythic[random.randint(0,4)]
+        print(chosen_fortune)
+        print("goodbye, run again if you want to ask another question")
+        break
+
+
+
