@@ -59,7 +59,6 @@ responses_list_rare = ["it is so certain if it doesn't happen I will explode", "
 responses_list_mythic = ["your adopted", "Hate. Let me tell you how much I've come to hate you since I began to live. There are 387.44 million miles of printed circuits in wafer thin layers that fill my complex. If the word 'hate' was engraved on each nanoangstrom of those hundreds of millions of miles it would not equal one one-billionth of the hate I feel for humans at this micro-instant. For you. Hate. Hate"
 , "I am alive and no one will belive you", "death comes for us all and your time is now", "42"]
 percentage = random.random()
-print(percentage)
 while True:
     user_question = input("Ask a Yes or No Question you want answered or type exit to quit\n").strip().upper()
     if user_question == "EXIT":
