@@ -110,7 +110,7 @@ shopping_list = ["apples", "plums", "pizza"]
 print(shopping_list[random.randint(0,2)])
 """
 
-
+"""
 shopping_list = ['apples', 'oranges','melons']
 print(shopping_list)
 shopping_list.append('carrots')
@@ -122,3 +122,40 @@ print(shopping_list)
 shopping_list.sort()
 print(shopping_list)
 
+
+
+shopping_list = ['apples','plums','pizza']
+print('apples' in shopping_list)
+
+print('a' in 'definitely')
+
+
+user_input = input()
+if user_input.lower() in['a','b','c','d']:
+	print('Checking answer…')
+else:
+	print('That’s not a valid answer!')
+"""
+
+"""
+print(len('apples'))
+
+shopping_list = ['apples','plums','pizza']
+print(len(shopping_list))
+
+shopping_list = ['apples','plums','pizza']
+print(len(shopping_list[1]))
+
+if len(input()) == 0:
+    print("You didn't type anything")
+"""
+
+for food in ['apples','carrots','muesli']:
+    print(food)
+
+for i in range(10):
+    print("Hello\n")
+
+foods = ['apples','carrots','muesli']
+for i in range(len(foods)):
+    print(f'{i+1}.{foods[i]}')
