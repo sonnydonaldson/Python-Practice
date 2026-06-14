@@ -53,12 +53,30 @@
 
 import random
 
-worldle_words = ["crack", "space", "Shard" , "agree", "world", "zesty", "jolly"]
+worldle_words = ["crack", "space", "shard" , "agree", "world", "zesty", "jolly"]
 play = True
 
 print("this is worldle you have to guess 5 letter words")
 
 while play == True:
     random_word = random.choice(worldle_words)
+    while True:
+        user_guess = input("what is your guess ").lower().strip()
+        if len(user_guess) != 5:
+            print("it is not 5 letters try again")
+            continue
+        if user_guess == random_word:
+            print("good job you got in correct")
+            break
+        for index, letter in enumerate(list(user_guess)):
+            if letter == random_word[index]:
+                print(f"this letter is correct {letter}")
+            elif letter in random_word:
+                print(f"this {letter} is correct but in the wrong place")
+    last_question = input("do you want to play again ").upper().strip()
+    if last_question in ("YES","Y", "ABSOLUTELY"):
+        play = True
+    else:
+        play = False
+            
 
-    user_guess = input("what is your first guess")
