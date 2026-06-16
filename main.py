@@ -159,3 +159,10 @@ for i in range(10):
 foods = ['apples','carrots','muesli']
 for i in range(len(foods)):
     print(f'{i+1}.{foods[i]}')
+
+counter = 1
+while counter < 4:
+    print("Looping!")
+    counter = counter + 1
+
+
