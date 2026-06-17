@@ -149,7 +149,7 @@ print(len(shopping_list[1]))
 if len(input()) == 0:
     print("You didn't type anything")
 """
-
+"""
 for food in ['apples','carrots','muesli']:
     print(food)
 
@@ -166,3 +166,40 @@ while counter < 4:
     counter = counter + 1
 
 
+"""
+"""
+fruit = [
+    {"name":"apples", "calories":52},
+    {"name":"oranges", "calories":47},
+    {"name":"pears", "calories":57},
+    {"name":"bananas", "calories":89},
+    {"name":"strawberries", "calories":32},
+    {"name":"grapes", "calories":68},
+    {"name":"blueberries", "calories":57},
+    {"name":"pineapples", "calories":50},
+    {"name":"kiwifruit", "calories":61},
+    {"name":"watermelon", "calories":30}
+]
+
+print(fruit[3]["name"])
+
+
+
+
+KEY_NAME = "name"
+KEY_CALORIES = "calories"
+
+fruit = [
+    {KEY_NAME:"apples", KEY_CALORIES:52},
+    {KEY_NAME:"oranges", KEY_CALORIES:47},
+    {KEY_NAME:"pears", KEY_CALORIES:57},
+    {KEY_NAME:"bananas", KEY_CALORIES:89},
+    {KEY_NAME:"strawberries", KEY_CALORIES:32},
+    {KEY_NAME:"grapes", KEY_CALORIES:68},
+    {KEY_NAME:"blueberries", KEY_CALORIES:57},
+    {KEY_NAME:"pineapples", KEY_CALORIES:50},
+    {KEY_NAME:"kiwifruit", KEY_CALORIES:61},
+    {KEY_NAME:"watermelon", KEY_CALORIES:30}
+]
+print(fruit[3][KEY_CALORIES])
+"""

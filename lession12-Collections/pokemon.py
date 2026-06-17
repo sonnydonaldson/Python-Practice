@@ -27,30 +27,32 @@
 # TODO: Give your wild pokemon each an attack value as well, then allow it to attack the user back each turn (You'' need a player health)
 # TODO: Change your 'user pokemon' to a list of different pokemon they can choose from. Each pokemon will have their own list of attacks.
 # TODO: Give all pokemon a type. Create a new dictionary of types that each has a dictionary of strengths and weaknesses. Use this to change the damage
-
-
+KEY_NAME = "name"
+KEY_DAMAGE = "DAMAGE"
+KEY_ATTACK_CHANCE = "HIT CHANCE"
+MAX_HEALTH = "max health"
 import random
 Wild_Pokemon = [
-    ["Rotom", 50],
-    ["Mewtwo", 106],
-    ["Eternatus", 140],
-    ["Diglett", 10]
+    {KEY_NAME:"Rotom",MAX_HEALTH: 50},
+    {KEY_NAME:"Mewtwo", MAX_HEALTH: 106},
+    {KEY_NAME:"Eternatus", MAX_HEALTH: 140},
+    {KEY_NAME: "Diglett", MAX_HEALTH: 10}
 ]
 User_Pokemon_atttack = [
-    ["beak blast",85],
-    ["fire blast",120],
-    ["vine wip",45],
-    ["draco metor", 130]
+    {KEY_NAME: "beak blast",KEY_DAMAGE: 85, KEY_ATTACK_CHANCE : 100},
+    {KEY_NAME :"fire blast",KEY_DAMAGE :120, KEY_ATTACK_CHANCE : 85},
+    {KEY_NAME : "vine wip",KEY_DAMAGE : 45, KEY_ATTACK_CHANCE: 100},
+    {KEY_NAME:"Fissure", KEY_DAMAGE: 1000, KEY_ATTACK_CHANCE: 50}
 ]
 randomised_wild_pokemon = random.choice(Wild_Pokemon)
-current_health = randomised_wild_pokemon[1]
-print(f"you are facing {randomised_wild_pokemon[0]}")
+current_health = randomised_wild_pokemon[MAX_HEALTH]
+print(f"you are facing {randomised_wild_pokemon[KEY_NAME]}")
 
 while current_health >= 0:
     while True:
         print(f"what move do you want to use use the numbers please ")
         for i, j in enumerate(User_Pokemon_atttack):
-            print(f"{i + 1}. {j[0]} damage {j[1]}")
+            print(f"{i + 1}. {j[KEY_NAME]} damage {j[KEY_DAMAGE]} hit chance {j[KEY_ATTACK_CHANCE]}%")
         user_pick = input()
         try:
             user_pick = int(user_pick)
@@ -58,6 +60,12 @@ while current_health >= 0:
         except:
             print("inviald answer try again please\n")
             continue
+    attack_chance = random.uniform(1,100)
     user_pick -= 1
-    current_health -= User_Pokemon_atttack[user_pick][1]
-    print(current_health)
+    if attack_chance <= User_Pokemon_atttack[user_pick][KEY_ATTACK_CHANCE]:  
+        current_health -= User_Pokemon_atttack[user_pick][KEY_DAMAGE]
+        print("you hit")
+        print(f"the {randomised_wild_pokemon[KEY_NAME]} has {current_health} health left")
+    else:
+        print(f"you missed the {randomised_wild_pokemon[KEY_NAME]}")
+print(f"Good job you beat {randomised_wild_pokemon[KEY_NAME]}")
