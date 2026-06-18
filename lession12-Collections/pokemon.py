@@ -53,60 +53,54 @@ User_Pokemon_atttack = [
 ]
 randomised_wild_pokemon = random.choice(Wild_Pokemon)
 wild_pokemon_current_health = randomised_wild_pokemon[MAX_HEALTH]
-you_current_health = 250
+you_current_health = 0
 print(f"you are facing {randomised_wild_pokemon[KEY_NAME]}")
+
 while True:
     while True:
-        while True:
-            print(f"what move do you want to use use the numbers please ")
-            for i, j in enumerate(User_Pokemon_atttack):
-                print(f"{i + 1}. {j[KEY_NAME]} damage {j[KEY_BASE_DAMAGE]} hit chance {j[KEY_ATTACK_CHANCE]}%")
-            user_pick = input()
-            try:
-                user_pick = int(user_pick)
-                break
-            except:
-                print("inviald answer try again please\n")
-                continue
-        which_pokemon_move = random.random()
-        if which_pokemon_move > 0.5:
-            which_pokemon_move_name = randomised_wild_pokemon[WILD_ATTACK_MOVE1_NAME]
-            which_pokemon_move_damage = randomised_wild_pokemon[WILD_ATTACK_MOVE1_DAMAGE]
-            which_pokemon_move_accuracy = randomised_wild_pokemon[WILD_ATTACK_MOVE1_ACCURACY]
-        else:
-            which_pokemon_move_name = randomised_wild_pokemon[WILD_ATTACK_MOVE2_NAME]
-            which_pokemon_move_damage = randomised_wild_pokemon[WILD_ATTACK_MOVE2_DAMAGE]
-            which_pokemon_move_accuracy = randomised_wild_pokemon[WILD_ATTACK_MOVE2_ACCURACY]
-        while True:
-            print(f"The {randomised_wild_pokemon[KEY_NAME]} used {which_pokemon_move_name}")
+        print(f"what move do you want to use use the numbers please ")
+        for i, j in enumerate(User_Pokemon_atttack):
+            print(f"{i + 1}. {j[KEY_NAME]} damage {j[KEY_BASE_DAMAGE]} hit chance {j[KEY_ATTACK_CHANCE]}%")
+        user_pick = input()
+        try:
+            user_pick = int(user_pick)
             break
-        your_attack_chance = random.uniform(1,100)
-        user_pick -= 1
-        crit_chance = random.uniform(1,24)
-        if your_attack_chance <= User_Pokemon_atttack[user_pick][KEY_ATTACK_CHANCE]:  
-            if crit_chance == User_Pokemon_atttack[user_pick][KEY_CRIT_CHANCE]:
-                print("you crit")
-                hit_dmage = User_Pokemon_atttack[user_pick][KEY_BASE_DAMAGE] * 1.5
-            hit_dmage = User_Pokemon_atttack[user_pick][KEY_BASE_DAMAGE]
-            wild_pokemon_current_health -= hit_dmage
-            print(f"you hit {randomised_wild_pokemon[KEY_NAME]} and did {hit_dmage} damage. the {randomised_wild_pokemon[KEY_NAME]} has {wild_pokemon_current_health} health left")
-        else:
-            print(f"you missed the {randomised_wild_pokemon[KEY_NAME]}")
-        wild_attack_chance = random.uniform(1,100)
-        if wild_attack_chance <= which_pokemon_move_accuracy:
-            you_current_health -= which_pokemon_move_damage
-            print(f"you have {you_current_health} health left")
-        else:
-            print(f"the {randomised_wild_pokemon[KEY_NAME]} missed")
-        if wild_pokemon_current_health >= 0:
-            print(f"Good job you beat {randomised_wild_pokemon[KEY_NAME]}")
-            break
-        elif you_current_health >= 0:
-            print("you lost")
-            break
-    do_they_want_to_play_again = input("do you want to play again Y/N").lower().strip()
-    if do_they_want_to_play_again in ("y","yes"):
-        continue
+        except:
+            print("inviald answer try again please\n")
+            continue
+    which_pokemon_move = random.random()
+    if which_pokemon_move > 0.5:
+        which_pokemon_move_name = randomised_wild_pokemon[WILD_ATTACK_MOVE1_NAME]
+        which_pokemon_move_damage = randomised_wild_pokemon[WILD_ATTACK_MOVE1_DAMAGE]
+        which_pokemon_move_accuracy = randomised_wild_pokemon[WILD_ATTACK_MOVE1_ACCURACY]
     else:
-        print("quiting game...")
-    break
+        which_pokemon_move_name = randomised_wild_pokemon[WILD_ATTACK_MOVE2_NAME]
+        which_pokemon_move_damage = randomised_wild_pokemon[WILD_ATTACK_MOVE2_DAMAGE]
+        which_pokemon_move_accuracy = randomised_wild_pokemon[WILD_ATTACK_MOVE2_ACCURACY]
+    while True:
+        print(f"The {randomised_wild_pokemon[KEY_NAME]} used {which_pokemon_move_name}")
+        break
+    your_attack_chance = random.uniform(1,100)
+    user_pick -= 1
+    crit_chance = random.uniform(1,24)
+    if your_attack_chance <= User_Pokemon_atttack[user_pick][KEY_ATTACK_CHANCE]:  
+        if crit_chance == User_Pokemon_atttack[user_pick][KEY_CRIT_CHANCE]:
+            print("you crit")
+            hit_dmage = User_Pokemon_atttack[user_pick][KEY_BASE_DAMAGE] * 1.5
+        hit_dmage = User_Pokemon_atttack[user_pick][KEY_BASE_DAMAGE]
+        wild_pokemon_current_health -= hit_dmage
+        print(f"you hit {randomised_wild_pokemon[KEY_NAME]} and did {hit_dmage} damage. the {randomised_wild_pokemon[KEY_NAME]} has {wild_pokemon_current_health} health left")
+    else:
+        print(f"you missed the {randomised_wild_pokemon[KEY_NAME]}")
+    if wild_pokemon_current_health <= 0:
+        print(f"Good job you beat {randomised_wild_pokemon[KEY_NAME]}")
+        break
+    wild_attack_chance = random.uniform(1,100)
+    if wild_attack_chance <= which_pokemon_move_accuracy:
+        you_current_health -= which_pokemon_move_damage
+        print(f"you have {you_current_health} health left")
+    else:
+        print(f"the {randomised_wild_pokemon[KEY_NAME]} missed")
+    if you_current_health <= 0:
+        print("you lost")
+        break
