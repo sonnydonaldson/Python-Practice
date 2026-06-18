@@ -53,7 +53,7 @@ User_Pokemon_atttack = [
 ]
 randomised_wild_pokemon = random.choice(Wild_Pokemon)
 wild_pokemon_current_health = randomised_wild_pokemon[MAX_HEALTH]
-you_current_health = 0
+you_current_health = 200
 print(f"you are facing {randomised_wild_pokemon[KEY_NAME]}")
 
 while True:
