@@ -166,12 +166,26 @@ def magic_8_ball():
             break
 
 def main():
-    which_program = input("which program do you want to run \n pokemon game \n shopping list calculator\n magic 8 ball")
-    if which_program == "pokemon game":
-        pokemon_code()
+    while True:
+        which_program = input("which program do you want to run \n pokemon game \n shopping list calculator\n magic 8 ball\n")
+        if which_program == "pokemon game":
+            pokemon_code()
+            break
+        elif which_program == "shopping list calculator":
+            shopping_list()
+            break
+        elif which_program == "magic 8 ball":
+            magic_8_ball()
+            break
+        else:
+            print("invaild answer")
+            continue
 
 
-                
+
+
+
+main()
             
 
 
