@@ -13,9 +13,10 @@ print(f"{answer}")
 
 """
 class person():
-    def __init__(self,iframe):
+    def __init__(self,iframe,hframe):
         self.iframe = iframe
-        print(iframe)
+        self.hframe = hframe
+        print(iframe + hframe)
 
-sonny = person("hello")
+sonny = person("hello","hi")
 print(sonny.iframe)

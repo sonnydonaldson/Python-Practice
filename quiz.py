@@ -1,3 +1,4 @@
+"""
 #varible to make sure they can't mess up and break the code
 answer_vaild = False
 score = 0 
@@ -98,3 +99,55 @@ else:
     print("Incorrect sound travels faster in water")
 
 print(f"your final score was {score}")
+"""
+KEY_QUESTION = "KEY_QUESTIONS"
+KEY_ANSWER = "KEY_ANSWER"
+KEY_CORRECT_RESPONS = "KEY_CORRECT_RESPONS"
+KEY_INCORRECT_RESPONS = "KEY_INCORRECT_RESPONS"
+KEY_POSSABLE_ANSWERS = "KEY_POSSABLE_ANSWERS"
+
+quiz_questions = [
+    {KEY_QUESTION: "What is the fastest any man made craft has gone(so it has a person in side of it)", KEY_POSSABLE_ANSWERS:["37,824 km/h","11.1km/s","383,947 Mph", "3,692 mph" ],KEY_ANSWER: ""}
+    ]
+
+
+
+def intro():
+    name = input("what is your name")
+    print(f"hello {name} this is a quiz about random things have fun")
+    return name
+
+class question():
+    def __init__(self,question, question_possable_answers,correct_answer, correct_respons, incorrect_respons):
+        self.question = question
+        self.question_possable_answers = question_possable_answers
+        self.correct_answer = correct_answer
+        self.correct_respons = correct_respons
+        self.incorrect_respons = incorrect_respons
+
+questions = [
+    question("What is the fastest any man made craft has gone(so it has a person in side of it)", )
+]   
+question1 = question()
+while True:
+    print(f"{question1.question}")
+    for i , j in enumerate(question1.question_possable_answers):
+        print(f"{i + 1} {j}")
+        user_answer = input()
+    try:
+        user_answer = int(user_answer)
+        break
+    except:
+        print("invaild answer try again")
+        continue
+if user_answer == question1.correct_answer:
+    print(f"{question1.correct_respons}")
+else:
+    print(f"{question1.incorrect_respons}")
+
+
+
+
+
+
+
