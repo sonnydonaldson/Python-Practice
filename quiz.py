@@ -125,8 +125,7 @@ class question():
         self.correct_respons = correct_respons
         self.incorrect_respons = incorrect_respons
 
-questions = [
-    question("What is the fastest any man made craft has gone(so it has a person in side of it)", ["37,824 km/h","11.1km/s","383,947 Mph","3,692 mph"],)
+questions = question("What is the fastest any man made craft has gone(so it has a person in side of it)", ["37,824 km/h","11.1km/s","383,947 Mph","3,692 mph"],)
 question1 = question()
 while True:
     print(f"{question1.question}")
