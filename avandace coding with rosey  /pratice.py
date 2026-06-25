@@ -16,7 +16,7 @@ class person():
     def __init__(self,iframe,hframe):
         self.iframe = iframe
         self.hframe = hframe
-        print(iframe + hframe)
+        
 
-sonny = person("hello","hi")
-print(sonny.iframe)
+sonny = person("hi", "sonny")
+print(sonny.iframe + sonny.hframe)

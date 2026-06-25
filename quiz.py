@@ -70,5 +70,5 @@ def main():
         else:
             print("shuting down...")
             break
-#calling the main def
+#calling the main code
 main()
