@@ -1,3 +1,4 @@
+import random
 """
 PROGRAM: Menu
 This starts with a menu so users can run 1 of 3 different programs:
@@ -167,7 +168,7 @@ def magic_8_ball():
 
 def main():
     while True:
-        which_program = input("which program do you want to run \n pokemon game \n shopping list calculator\n magic 8 ball\n")
+        which_program = input("which program do you want to run \n pokemon game \n shopping list calculator\n magic 8 ball\n").strip().lower()
         if which_program == "pokemon game":
             pokemon_code()
             break

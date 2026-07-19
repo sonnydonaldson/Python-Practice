@@ -1,6 +1,15 @@
 import random
 import keyboard
+import os
 
+print("Python is looking inside:", os.getcwd())
+print("Files available here:", os.listdir("."))
+
+
+
+
+
+"""
 eRelease = True
 while True:
     if keyboard.is_pressed("e") and eRelease:
@@ -9,6 +18,7 @@ while True:
 
     elif not keyboard.is_pressed("e"):
         eRelease = True
+"""
 """
 name = input("hello what is your name ").upper().strip()
 
