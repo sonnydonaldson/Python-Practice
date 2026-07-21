@@ -42,7 +42,7 @@ class person():
 sonny = person("hi", "sonny")
 print(sonny.iframe + sonny.hframe)
 
-
+"""
 
 class room():
     def __init__(self, name):
@@ -72,4 +72,7 @@ rooms = [
     combatRoom("Dungeon", "Vampire"),
     shopRoom("Shop", "Sword")
 ]
-"""
+chosenRoom = random.choice(rooms)
+chosenRoom.describeRoom()
+if type(chosenRoom) is shopRoom:
+    chosenRoom.item()
