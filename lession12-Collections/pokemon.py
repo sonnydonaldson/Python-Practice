@@ -104,3 +104,4 @@ while True:
     if you_current_health <= 0:
         print("you lost")
         break
+    
