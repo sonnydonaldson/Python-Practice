@@ -260,7 +260,7 @@ def gambling_room(your_current_health):
             return your_current_health
     else:
         print("you leave the room")
-"""
+
 def upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance):
     print("you walk into the room and there is an anvil in the middle on it")
     user_upgrade = input("do you want to use it yes/no").strip().upper()
@@ -282,26 +282,26 @@ def upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance
                     bludgeon_dam += 10
                     print("bludgeon now does 10 extra damage")
                     print("you walk out of the room to the next one")
-                    return bludgeon_dam
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
                 elif what_to_upgrade == 2:
                     shiv_dam += 5
                     print("shiv now does 5 extra damage")
                     print("you walk out of the room to the next one")
-                    return shiv_dam
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
                 elif which_one == 3:
                     punch_dam += 14
                     print("punch now does 7 extra damage")
                     print("you walk out of the room to the next one")
-                    return punch_dam
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
                 elif which_one == 4:
                     shoot_with_bow_dam += 20
                     print("bow now does 20 extra damage")
                     print("you walk out of the room to the next one")
-                    return shoot_with_bow_dam
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
             if what_to_upgrade == "ACCURACY":
                 while True:
                     print("what do you want to upgrade (please answer in numbers)")
-                    print("1.bludgeon damage \n 2.shiv damage \n 3.punch damage \n 4.bow damage")
+                    print("1.bludgeon accuracy \n 2.shiv accuracy \n 3.punch accuracy \n 4.bow accuracy")
                     which_one = input()
                     try:
                         which_one = int(which_one)
@@ -313,26 +313,26 @@ def upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance
                     bludgeon_attack_chance += 10
                     print(f"bludgeon now has {bludgeon_attack_chance}%")
                     print("you walk out of the room to the next one")
-                    return bludgeon_attack_chance
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
                 elif what_to_upgrade == 2:
                     shiv_attack_chance += 10
                     print(f"shiv now has {shiv_attack_chance}%")
                     print("you walk out of the room to the next one")
-                    return shiv_attack_chance
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
                 elif which_one == 3:
                     punch_attack_chance += 10
                     print(f"punch now has {punch_attack_chance}%")
                     print("you walk out of the room to the next one")
-                    return punch_attack_chance
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance 
                 elif which_one == 4:
                     shoot_with_bow_attack_chance += 10
-                    print(f"bludgeon now has {shoot_with_bow_attack_chance}%")
+                    print(f"bow now has {shoot_with_bow_attack_chance}%")
                     print("you walk out of the room to the next one")
-                    return shoot_with_bow_attack_chance
+                    return bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance
             else:
                 print("invaild answer")
                 continue
-"""
+
 
 print("you are trpped in this dungeon and you have to make your way out")
 number_of_times_though = 0
@@ -369,152 +369,13 @@ while number_of_times_though <= 15:
             number_of_times_though += 1
             continue
         elif chosen_room1[KEY_NAME] == rooms[1][KEY_NAME]:
-            print("you walk into the room and there is an anvil in the middle on it")
-            user_upgrade = input("do you want to use it yes/no\n").strip().upper()
-            if user_upgrade in ("YES","Y"):
-                while True:
-                    what_to_upgrade = input("what do you want to upgrade \n damage \n accuracy \n").strip().upper()
-                    if what_to_upgrade == "DAMAGE":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon damage \n2.shiv damage \n3.punch damage \n4.bow damage \n")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_dam += 10
-                            print("bludgeon now does 10 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_dam += 5
-                            print("shiv now does 5 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_dam += 14
-                            print("punch now does 7 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_dam += 20
-                            print("bow now does 20 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                    if what_to_upgrade == "ACCURACY":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon accuracy \n2.shiv accuracy \n3.punch accuracy \n4.bow accuracy")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_attack_chance += 10
-                            print(f"bludgeon now has {bludgeon_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_attack_chance += 10
-                            print(f"shiv now has {shiv_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_attack_chance += 10
-                            print(f"punch now has {punch_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_attack_chance += 10
-                            print(f"using the bow now has {shoot_with_bow_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                    else:
-                        print("invaild answer")
-                        continue
+            bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance = upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance)
             number_of_times_though += 1
             continue
         elif chosen_room1[KEY_NAME] == rooms[2][KEY_NAME]:
             your_current_health = hard_fight(your_current_health)
             
-            
-            print("from the enemy you get an upgrade")
-            user_upgrade = input("do you want to use it yes/no").strip().upper()
-            if user_upgrade in ("YES","Y"):
-                while True:
-                    what_to_upgrade = input("what do you want to upgrade \n damage \n accuracy \n").strip().upper()
-                    if what_to_upgrade == "DAMAGE":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon damage \n 2.shiv damage \n 3.punch damage \n 4.bow damage")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_dam += 15
-                            print("bludgeon now does 10 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_dam += 10
-                            print("shiv now does 5 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_dam += 21
-                            print("punch now does 7 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_dam += 30
-                            print("bow now does 20 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                    if what_to_upgrade == "ACCURACY":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon accuracy \n 2.shiv accuracy \n 3.punch accuracy \n 4.bow accuracy")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_attack_chance += 20
-                            print(f"bludgeon now has {bludgeon_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_attack_chance += 20
-                            print(f"shiv now has {shiv_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_attack_chance += 20
-                            print(f"punch now has {punch_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_attack_chance += 20
-                            print(f"using the bow now has {shoot_with_bow_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                    else:
-                        print("invaild answer")
-                        continue
+            bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance = upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance)
             number_of_times_though += 1
         elif chosen_room1[KEY_NAME] == rooms[3][KEY_NAME]:
 
@@ -530,152 +391,15 @@ while number_of_times_though <= 15:
             number_of_times_though += 1
             continue
         elif chosen_room2[KEY_NAME] == rooms[1][KEY_NAME]:
-            print("you walk into the room and there is an anvil in the middle on it")
-            user_upgrade = input("do you want to use it yes/no").strip().upper()
-            if user_upgrade in ("YES","Y"):
-                while True:
-                    what_to_upgrade = input("what do you want to upgrade \n damage \n accuracy \n").strip().upper()
-                    if what_to_upgrade == "DAMAGE":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon damage \n 2.shiv damage \n 3.punch damage \n 4.bow damage")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_dam += 10
-                            print("bludgeon now does 10 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_dam += 5
-                            print("shiv now does 5 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_dam += 14
-                            print("punch now does 7 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_dam += 20
-                            print("bow now does 20 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                    if what_to_upgrade == "ACCURACY":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon accuracy \n 2.shiv accuracy \n 3.punch accuracy \n 4.bow accuracy")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_attack_chance += 10
-                            print(f"bludgeon now has {bludgeon_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_attack_chance += 10
-                            print(f"shiv now has {shiv_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_attack_chance += 10
-                            print(f"punch now has {punch_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_attack_chance += 10
-                            print(f"using the bow now has {shoot_with_bow_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                    else:
-                        print("invaild answer")
-                        continue
+            bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance = upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance)
+            
             number_of_times_though += 1
             continue
         elif chosen_room2[KEY_NAME] == rooms[2][KEY_NAME]:
             your_current_health = hard_fight(your_current_health)
         
             
-            print("from the enemy you get an upgrade")
-            user_upgrade = input("do you want to use it yes/no").strip().upper()
-            if user_upgrade in ("YES","Y"):
-                while True:
-                    what_to_upgrade = input("what do you want to upgrade \n damage \n accuracy \n").strip().upper()
-                    if what_to_upgrade == "DAMAGE":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon damage \n 2.shiv damage \n 3.punch damage \n 4.bow damage")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_dam += 15
-                            print("bludgeon now does 10 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_dam += 10
-                            print("shiv now does 5 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_dam += 21
-                            print("punch now does 7 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_dam += 30
-                            print("bow now does 20 extra damage")
-                            print("you walk out of the room to the next one")
-                            break
-                    if what_to_upgrade == "ACCURACY":
-                        while True:
-                            print("what do you want to upgrade (please answer in numbers)")
-                            print("1.bludgeon accuracy \n 2.shiv accuracy \n 3.punch accuracy \n 4.bow accuracy")
-                            which_one = input()
-                            try:
-                                which_one = int(which_one)
-                                break
-                            except:
-                                print("invaild answer")
-                                continue
-                        if which_one == 1:
-                            bludgeon_attack_chance += 20
-                            print(f"bludgeon now has {bludgeon_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif what_to_upgrade == 2:
-                            shiv_attack_chance += 20
-                            print(f"shiv now has {shiv_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 3:
-                            punch_attack_chance += 20
-                            print(f"punch now has {punch_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                        elif which_one == 4:
-                            shoot_with_bow_attack_chance += 20
-                            print(f"using the bow now has {shoot_with_bow_attack_chance}%")
-                            print("you walk out of the room to the next one")
-                            break
-                    else:
-                        print("invaild answer")
-                        continue
+            bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance = upgrade_room(bludgeon_dam,bludgeon_attack_chance,shiv_dam,shiv_attack_chance,punch_dam,punch_attack_chance,shoot_with_bow_dam,shoot_with_bow_attack_chance)
             number_of_times_though += 1
         elif chosen_room2[KEY_NAME] == rooms[3][KEY_NAME]:
             your_current_health = health_room(your_current_health)
