@@ -453,7 +453,7 @@ def gambling_health_room(your_current_health):
         #leaving because they didn't want to do it 
         elif gambling_yes_or_no in ("NO","N"):
                 print("you walk out of the room on to the next one")
-                return bludgeon_dam, bludgeon_attack_chance, shiv_dam, shiv_attack_chance, punch_dam, punch_attack_chance, shoot_with_bow_dam, shoot_with_bow_attack_chance
+                return your_current_health
                 #if they didn't say yes or no it resets
         else:
             print("invaild answer")
